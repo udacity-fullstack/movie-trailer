@@ -61,37 +61,12 @@
           </div>
         </div>
         <div class="container">
-          
+          {% for movie in movies %}
             <div class="col-md-6 col-lg-4 movie-tile text-center">
-              <img class="poster" data-trailer-youtube-id="woHTUsl66BY" data-toggle="modal" data-target="#trailer" src="https://upload.wikimedia.org/wikipedia/en/2/23/Max_Mad_Fury_Road_Newest_Poster.jpg" width="220" height="342">
-              <h2><a href=http://www.imdb.com/title/tt1392190/>Mad Max: Fury Road</a></h2>
+              <img class="poster" data-trailer-youtube-id="{{movie.trailer_youtube_id}}" data-toggle="modal" data-target="#trailer" src="{{movie.poster_image_url}}" width="220" height="342">
+              <h2><a href={{movie.imdb_link}}>{{movie.title}}</a></h2>
             </div>
-          
-            <div class="col-md-6 col-lg-4 movie-tile text-center">
-              <img class="poster" data-trailer-youtube-id="UkdFtNyvsBM" data-toggle="modal" data-target="#trailer" src="https://upload.wikimedia.org/wikipedia/en/c/c5/Farewell_My_Concubine_poster.jpg" width="220" height="342">
-              <h2><a href=http://www.imdb.com/title/tt0106332/>Farewell My Concubine</a></h2>
-            </div>
-          
-            <div class="col-md-6 col-lg-4 movie-tile text-center">
-              <img class="poster" data-trailer-youtube-id="Ok3uTBZdQ6s" data-toggle="modal" data-target="#trailer" src="https://upload.wikimedia.org/wikipedia/en/8/84/Seven_Samurai_movie_poster.jpg" width="220" height="342">
-              <h2><a href=http://www.imdb.com/title/tt0047478/>The Seven Samurai</a></h2>
-            </div>
-          
-            <div class="col-md-6 col-lg-4 movie-tile text-center">
-              <img class="poster" data-trailer-youtube-id="5DO-nDW43Ik" data-toggle="modal" data-target="#trailer" src="https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg" width="220" height="342">
-              <h2><a href=http://www.imdb.com/title/tt0068646>The Godfather</a></h2>
-            </div>
-          
-            <div class="col-md-6 col-lg-4 movie-tile text-center">
-              <img class="poster" data-trailer-youtube-id="Vnws8ZymxME" data-toggle="modal" data-target="#trailer" src="https://upload.wikimedia.org/wikipedia/en/c/cf/Confessions_%282010%29_film_poster.jpg" width="220" height="342">
-              <h2><a href=http://www.imdb.com/title/tt1590089>Confessions</a></h2>
-            </div>
-          
-            <div class="col-md-6 col-lg-4 movie-tile text-center">
-              <img class="poster" data-trailer-youtube-id="yicBx-okC3k" data-toggle="modal" data-target="#trailer" src="https://upload.wikimedia.org/wikipedia/en/b/b4/Eat_Drink_Man_Woman.jpg" width="220" height="342">
-              <h2><a href=http://www.imdb.com/title/tt0111797/>Eat Drink Man Woman</a></h2>
-            </div>
-          
+          {% endfor %}
         </div>
       </body>
       </html>
